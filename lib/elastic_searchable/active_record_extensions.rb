@@ -83,7 +83,7 @@ module ElasticSearchable
           scope = options.delete(:scope) || self
           page = options[:page]
           per_page = options[:per_page]
-          records = scope.limit(per_page).offset(per_page * (page -1)).all
+          records = scope.limit(per_page).offset(per_page * (page -1))
           while records.any? do
             ElasticSearchable.logger.debug "reindexing batch ##{page}..."
             actions = []
@@ -105,7 +105,7 @@ module ElasticSearchable
             end
 
             page += 1
-            records = scope.limit(per_page).offset(per_page* (page-1)).all
+            records = scope.limit(per_page).offset(per_page* (page-1))
           end
         end
 
