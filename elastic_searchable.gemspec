@@ -25,7 +25,6 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency(%q<multi_json>, [">= 1.0.0"])
   s.add_development_dependency(%q<rake>, ["0.9.2.2"])
   s.add_development_dependency(%q<sqlite3>, ["1.3.5"])
-  s.add_development_dependency(%q<pry>, ["0.9.6.2"])
   s.add_development_dependency(%q<shoulda>, ["2.11.3"])
   s.add_development_dependency(%q<mocha>, ["0.10.0"])
   s.add_development_dependency(%q<pry>, ["0.9.9.3"])
